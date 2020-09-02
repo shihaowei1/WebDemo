@@ -10,21 +10,21 @@ namespace MvcDemo.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View();  //对应视图中的Home/Index.cshtml
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return View();  //对应视图中的Home/About.cshtml
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+        //public ActionResult Contact()
+        //{
+        //    ViewBag.Message = "Your contact page.";
 
-            return View();
-        }
+        //    return View();
+        //}
     }
 }
