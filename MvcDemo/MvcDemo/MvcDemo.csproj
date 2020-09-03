@@ -186,6 +186,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\MovieDBs\Create.cshtml" />
+    <Content Include="Views\MovieDBs\Delete.cshtml" />
+    <Content Include="Views\MovieDBs\Details.cshtml" />
+    <Content Include="Views\MovieDBs\Edit.cshtml" />
     <Content Include="Views\MovieDBs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />

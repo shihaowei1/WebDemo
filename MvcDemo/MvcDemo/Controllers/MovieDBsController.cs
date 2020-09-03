@@ -2,133 +2,126 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Runtime.Remoting.Messaging;
-using System.Web.Http;
-using System.Web.Http.Controllers;
-using System.Web.Http.Description;
+using System.Web;
 using System.Web.Mvc;
 using MvcDemo.Models;
 
 namespace MvcDemo.Controllers
 {
-
     public class MovieDBsController : Controller
     {
-        public ActionResult Index() //右击Index，新建视图
+        private MovieDBContext db = new MovieDBContext();
+
+        // GET: MovieDBs
+        public ActionResult Index()
+        {
+            return View(db.Movies.ToList());
+        }
+
+        // GET: MovieDBs/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            MovieDB movieDB = db.Movies.Find(id);
+            if (movieDB == null)
+            {
+                return HttpNotFound();
+            }
+            return View(movieDB);
+        }
+
+        // GET: MovieDBs/Create
+        public ActionResult Create()
         {
             return View();
         }
 
+        // POST: MovieDBs/Create
+        // 为了防止“过多发布”攻击，请启用要绑定到的特定属性；有关
+        // 更多详细信息，请参阅 https://go.microsoft.com/fwlink/?LinkId=317598。
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ID,Title,Director,Date")] MovieDB movieDB)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Movies.Add(movieDB);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(movieDB);
+        }
+
+        // GET: MovieDBs/Edit/5
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            MovieDB movieDB = db.Movies.Find(id);
+            if (movieDB == null)
+            {
+                return HttpNotFound();
+            }
+            return View(movieDB);
+        }
+
+        // POST: MovieDBs/Edit/5
+        // 为了防止“过多发布”攻击，请启用要绑定到的特定属性；有关
+        // 更多详细信息，请参阅 https://go.microsoft.com/fwlink/?LinkId=317598。
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "ID,Title,Director,Date")] MovieDB movieDB)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(movieDB).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(movieDB);
+        }
+
+        // GET: MovieDBs/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            MovieDB movieDB = db.Movies.Find(id);
+            if (movieDB == null)
+            {
+                return HttpNotFound();
+            }
+            return View(movieDB);
+        }
+
+        // POST: MovieDBs/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            MovieDB movieDB = db.Movies.Find(id);
+            db.Movies.Remove(movieDB);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
-
-    //public class MovieDBsController : ApiController
-    //{
-
-    //    private MovieDBContext db = new MovieDBContext();
-
-    //    GET: api/MovieDBs
-    //    public IQueryable<MovieDB> GetMovies()
-    //    {
-    //        return db.Movies;
-    //    }
-
-    //    GET: api/MovieDBs/5
-    //    [ResponseType(typeof(MovieDB))]
-    //    public IHttpActionResult GetMovieDB(int id)
-    //    {
-    //        MovieDB movieDB = db.Movies.Find(id);
-    //        if (movieDB == null)
-    //        {
-    //            return NotFound();
-    //        }
-
-    //        return Ok(movieDB);
-    //    }
-
-    //    PUT: api/MovieDBs/5
-    //    [ResponseType(typeof(void))]
-    //    public IHttpActionResult PutMovieDB(int id, MovieDB movieDB)
-    //    {
-    //        if (!ModelState.IsValid)
-    //        {
-    //            return BadRequest(ModelState);
-    //        }
-
-    //        if (id != movieDB.ID)
-    //        {
-    //            return BadRequest();
-    //        }
-
-    //        db.Entry(movieDB).State = EntityState.Modified;
-
-    //        try
-    //        {
-    //            db.SaveChanges();
-    //        }
-    //        catch (DbUpdateConcurrencyException)
-    //        {
-    //            if (!MovieDBExists(id))
-    //            {
-    //                return NotFound();
-    //            }
-    //            else
-    //            {
-    //                throw;
-    //            }
-    //        }
-
-    //        return StatusCode(HttpStatusCode.NoContent);
-    //    }
-
-    //    POST: api/MovieDBs
-    //   [ResponseType(typeof(MovieDB))]
-    //    public IHttpActionResult PostMovieDB(MovieDB movieDB)
-    //    {
-    //        if (!ModelState.IsValid)
-    //        {
-    //            return BadRequest(ModelState);
-    //        }
-
-    //        db.Movies.Add(movieDB);
-    //        db.SaveChanges();
-
-    //        return CreatedAtRoute("DefaultApi", new { id = movieDB.ID }, movieDB);
-    //    }
-
-    //    DELETE: api/MovieDBs/5
-    //    [ResponseType(typeof(MovieDB))]
-    //    public IHttpActionResult DeleteMovieDB(int id)
-    //    {
-    //        MovieDB movieDB = db.Movies.Find(id);
-    //        if (movieDB == null)
-    //        {
-    //            return NotFound();
-    //        }
-
-    //        db.Movies.Remove(movieDB);
-    //        db.SaveChanges();
-
-    //        return Ok(movieDB);
-    //    }
-
-    //    protected override void Dispose(bool disposing)
-    //    {
-    //        if (disposing)
-    //        {
-    //            db.Dispose();
-    //        }
-    //        base.Dispose(disposing);
-    //    }
-
-    //    private bool MovieDBExists(int id)
-    //    {
-    //        return db.Movies.Count(e => e.ID == id) > 0;
-    //    }
-
-    //}
-
 }
