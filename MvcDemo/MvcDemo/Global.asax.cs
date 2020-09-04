@@ -3,6 +3,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Http;
 
+
 namespace MvcDemo
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -14,6 +15,7 @@ namespace MvcDemo
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
         }
     }
 }

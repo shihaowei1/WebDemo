@@ -150,6 +150,10 @@
     <Content Include="App_Data\Movies_log.ldf">
       <DependentUpon>Movies.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\MvcDemo.Models.MovieDBContext.mdf" />
+    <Content Include="App_Data\MvcDemo.Models.MovieDBContext_log.ldf">
+      <DependentUpon>MvcDemo.Models.MovieDBContext.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

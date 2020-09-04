@@ -56,7 +56,10 @@ C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\EntityFramework.SqlServer.d
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\Newtonsoft.Json.dll
+C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Net.Http.Formatting.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Helpers.dll
+C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Http.dll
+C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Http.WebHost.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Mvc.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Optimization.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Razor.dll
@@ -66,6 +69,9 @@ C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.WebPages.Razor.d
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\WebGrease.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\EntityFramework.xml
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\EntityFramework.SqlServer.xml
+C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Net.Http.Formatting.xml
+C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Http.xml
+C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Http.WebHost.xml
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Helpers.xml
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Mvc.xml
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Optimization.xml
@@ -83,14 +89,8 @@ C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\zh-Hans\System.Web.Razor.re
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\zh-Hans\System.Web.WebPages.resources.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\obj\Debug\MvcDemo.csprojAssemblyReference.cache
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\obj\Debug\MvcDemo.csproj.CoreCompileInputs.cache
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\obj\Debug\MvcDemo.csproj.CopyComplete
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\obj\Debug\MvcDemo.dll
 C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\obj\Debug\MvcDemo.pdb
-C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Net.Http.Formatting.dll
-C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Http.dll
-C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Http.WebHost.dll
-C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Net.Http.Formatting.xml
-C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Http.xml
-C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\bin\System.Web.Http.WebHost.xml
+C:\Users\ShiHW\Documents\WebDemo\MvcDemo\MvcDemo\obj\Debug\MvcDemo.csprojAssemblyReference.cache
