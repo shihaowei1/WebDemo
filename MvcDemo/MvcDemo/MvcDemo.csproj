@@ -146,10 +146,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Movies.mdf" />
-    <Content Include="App_Data\Movies_log.ldf">
-      <DependentUpon>Movies.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\MvcDemo.Models.MovieDBContext.mdf" />
     <Content Include="App_Data\MvcDemo.Models.MovieDBContext_log.ldf">
       <DependentUpon>MvcDemo.Models.MovieDBContext.mdf</DependentUpon>
