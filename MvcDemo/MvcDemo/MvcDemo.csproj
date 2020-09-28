@@ -139,16 +139,22 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MovieDBsController.cs" />
+    <Compile Include="Controllers\OthersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\MovieDB.cs" />
+    <Compile Include="Models\Others.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\MvcDemo.Models.MovieDBContext.mdf" />
     <Content Include="App_Data\MvcDemo.Models.MovieDBContext_log.ldf">
       <DependentUpon>MvcDemo.Models.MovieDBContext.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\MvcDemo.Models.OtherContext.mdf" />
+    <Content Include="App_Data\MvcDemo.Models.OtherContext_log.ldf">
+      <DependentUpon>MvcDemo.Models.OtherContext.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -191,6 +197,11 @@
     <Content Include="Views\MovieDBs\Details.cshtml" />
     <Content Include="Views\MovieDBs\Edit.cshtml" />
     <Content Include="Views\MovieDBs\Index.cshtml" />
+    <Content Include="Views\Others\Create.cshtml" />
+    <Content Include="Views\Others\Delete.cshtml" />
+    <Content Include="Views\Others\Details.cshtml" />
+    <Content Include="Views\Others\Edit.cshtml" />
+    <Content Include="Views\Others\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
