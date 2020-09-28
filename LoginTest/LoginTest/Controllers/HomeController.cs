@@ -20,9 +20,10 @@ namespace LoginTest.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Login()
         {
-            ViewBag.Message = "Your contact page.";
+            //ViewBag.Title = "欢迎登陆！";
+            ViewBag.Message = "欢迎登陆！";
 
             return View();
         }

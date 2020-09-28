@@ -84,3 +84,7 @@ C:\Users\ShiHW\Documents\GitStore\WebDemo\LoginTest\LoginTest\obj\Debug\LoginTes
 C:\Users\ShiHW\Documents\GitStore\WebDemo\LoginTest\LoginTest\obj\Debug\LoginTest.csproj.CopyComplete
 C:\Users\ShiHW\Documents\GitStore\WebDemo\LoginTest\LoginTest\obj\Debug\LoginTest.dll
 C:\Users\ShiHW\Documents\GitStore\WebDemo\LoginTest\LoginTest\obj\Debug\LoginTest.pdb
+C:\Users\ShiHW\Documents\GitStore\WebDemo\LoginTest\LoginTest\bin\EntityFramework.dll
+C:\Users\ShiHW\Documents\GitStore\WebDemo\LoginTest\LoginTest\bin\EntityFramework.SqlServer.dll
+C:\Users\ShiHW\Documents\GitStore\WebDemo\LoginTest\LoginTest\bin\EntityFramework.xml
+C:\Users\ShiHW\Documents\GitStore\WebDemo\LoginTest\LoginTest\bin\EntityFramework.SqlServer.xml

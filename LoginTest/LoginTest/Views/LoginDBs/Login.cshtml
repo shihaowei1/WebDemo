@@ -1,0 +1,76 @@
+﻿@model IEnumerable<LoginTest.Models.LoginDB>
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>登陆注册</h2>
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+        @*<div class="login-logo">
+            <b>登录</b>
+        </div>*@
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+             @*   <p class="login-box-msg">demo演示</p>*@
+                <form action="@Url.Action("Login", "LoginDBs")" method="post">
+                    <div class="form-group has-feedback">
+                        <span class="glyphicon glyphicon-user">账号</span>
+                        <input class="form-control" name="name" placeholder="账号" />
+                    </div>
+                    <div class="form-group has-feedback">
+                        <span class="glyphicon glyphicon-lock">密码</span>
+                        <input name="passwd" placeholder="密码" class="form-control" />
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="checkbox icheck">
+                                <input class="btn btn-primary btn-block btn-flat" value="注册" onclick="window.location.href = '@Url.Action("register", "Demo")'" />
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <input type="submit" value="登录" class="btn btn-primary btn-block btn-flat" />
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+    </div>
+</body>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.passwd)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.passwd)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+
+    </table>*@
