@@ -20,11 +20,12 @@ namespace MvcMovie.Controllers
         }
 
         //GET: HelloWorld/Welcome
-        public string Welcome(string name, int ID = 1)
+        public string Welcome(string name, int numTimes = 1)
         {
-            return HttpUtility.HtmlEncode("Hello " + name + ", ID: " + ID);
-            //return HttpUtility.HtmlEncode("Hello" + name + ", NumTimes is: " + numTimes);
-            //return "This is the Welcome action method...";
+            //通常情况下，控制器不直接返回html，这样会比较麻烦
+            string message = "Hello " + name + ", NumTimes is: " + numTimes;
+            return "" + Server.HtmlEncode(message) + "";
+
         }
     }
 }
